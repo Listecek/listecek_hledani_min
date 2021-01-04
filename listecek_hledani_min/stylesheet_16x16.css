@@ -1,0 +1,211 @@
+@font-face { /* deklarace digitálního písma pro časovač */
+    font-family: Digital; /* název písma */
+    src: url(fonts/digital-7.ttf); /* odkaz na písmo */
+}
+
+* { /* Všechny elementy v dokumentu mají následující styly. */
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 100%;
+	box-sizing: border-box;
+	background: #fff url("images/gray_background_2.jpg") repeat;
+}
+
+.záhlaví-stránka {
+	background-color: #fff;
+	width: auto;
+	padding: 20px 0;
+}
+
+h1 { /* hlavní nadpis stránky */
+    padding-left: 20px;
+}
+
+/* styly pro navigační lištu */
+
+nav ul {
+	list-style-type: none;
+	background-color: #404040;
+	overflow: hidden;
+}
+
+nav li {
+	display: inline;
+	box-sizing: border-box;
+	float: left;
+}
+
+nav a {
+	text-decoration: none;
+	display: inline-block;
+	color: #fff;
+	padding: 10px 15px;
+}
+
+nav a:hover:not(.aktivní) {
+	background-color: #000;
+}
+
+.aktivní {
+	background-color: #cc0000;
+}
+
+.stránka { /* styly pro kontejner s hracím polem */
+    width: 500px;
+    margin: 50px auto;
+    padding: 20px 0 10px 0;
+    background-color: #cccccc;
+    border: 3px solid #000000;
+}
+
+/* styly pro záhlaví hracího pole */
+
+.záhlaví-kontejner {
+    display: flex;
+    justify-content: space-between;
+    width: 454px;
+    margin: 0 auto;
+}
+
+.záhlaví-kontejner div {
+    -webkit-user-select: none;  
+    -moz-user-select: none;    
+    -ms-user-select: none;      
+    user-select: none;
+}
+
+#ukazatel-počtu-min { /* styly pro ukazatel počtu min */
+    height: 60px;
+    line-height: 60px;
+    width: 120px;
+    text-align: center;
+    border: 2px solid #d9d9d9;
+    background-color: #000000;
+    font-family: Digital;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #ff0000;
+}
+
+#refresh { /* styly pro tlačítko pro obnovení stránky */
+    height: 60px;
+    line-height: 60px;
+    width: 120px;
+    text-align: center;
+    border: 2px solid #d9d9d9;
+    background-color: #000000;
+    font-family: Digital;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #ff0000;
+    cursor: pointer;
+}
+
+#časovač { /* styly pro časovač */
+    height: 60px;
+    line-height: 60px;
+    width: 120px;
+    text-align: center;
+    border: 2px solid #d9d9d9;
+    background-color: #000000;
+    font-family: Digital;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.kontejner { /* styly pro hrací pole */
+    height: 448px;
+    width: 448px;
+    border: 3px solid #000;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    background-color: #d9d9d9;
+}
+
+.kontejner div { /* styly pro jednotlivé čtverce hracího pole */
+    height: 22px;
+    line-height: 22px;
+    width: 22px;
+    background-color: #d9d9d9;
+    border: 2px outset #a6a6a6;
+    text-align: center;
+    vertical-align: middle;
+    margin: 1px;
+    font-size: 20px;
+
+    -webkit-user-select: none;  
+    -moz-user-select: none;    
+    -ms-user-select: none;      
+    user-select: none;
+}
+
+.kontejner div:hover:not(.ověřeno):not(.vlaječka) { /* Neověřené čtverce nebo čtverce neoznačené vlaječkou budou zvýrazněny, 
+    když nad sebou budou mít kurzor. */
+    background-color: #cccccc;
+}
+
+.kontejner div.ověřeno { /* styly pro ověřené čtverce */
+    background-color: #bfbfbf;
+    border: 2px solid #a6a6a6;
+}
+
+.viditelná-mina { /* odkaz na obrázek miny */
+    background: #d9d9d9 url("images/mina_22px.gif") no-repeat center center;
+}
+
+.kontejner div.zašlápnutá-mina { /* Zašlápnutá mina má červené pozadí. */
+    background-color: #e60000;
+}
+
+.vlaječka { /* odkaz na obrázek vlaječky */
+    background: #d9d9d9 url("images/vlaječka_22px.png") no-repeat center center;
+}
+
+/* styly pro čísla určující počet okolních min */
+
+[data] {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+[data="0"] {
+    color: transparent;
+}
+
+[data="1"] {
+    color: #0066ff;
+}
+
+[data="2"] {
+    color: #009900;
+}
+
+[data="3"] {
+    color: #ff66ff;
+}
+
+[data="4"] {
+    color: #ff0066;
+}
+
+[data="5"] {
+    color: #ff0000;
+}
+
+[data="6"] {
+    color: #ff6600;
+}
+
+[data="7"] {
+    color: #6600cc;
+}
+
+[data="8"] {
+    color: #00ff00;
+}

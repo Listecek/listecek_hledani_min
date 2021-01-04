@@ -1,0 +1,39 @@
+<!DOCTYPE html> <!-- Všechny HTML dokumenty musí obsahovat HTML prohlášení, aby prohlížeč poznal, o jaký typ dokumentu se jedná. -->
+<html lang="cs" dir="ltr"> <!-- Tento tag je kontejner pro všechny HTML elementy. Jazyk stránky je čeština a směr textu je zleva doprava. -->
+<head> <!-- V hlavě dokumentu se nachází všechny metadata o dané stránce. -->
+    <title>Hledání min</title> <!-- titul stránky -->
+    <meta charset="UTF-8"> <!-- Sada znaků daného dokumentu je Unicode. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Stránka je nyní více responzivní. -->
+    <link rel="stylesheet" href="stylesheet_30x16.css"> <!-- propojení HTML dokumentu s CSS dokumentem -->
+    <script src="script_30x16.js" charset="utf-8"></script> <!-- propojení HTML dokumentu s Javascript dokumentem -->
+</head>
+<body> <!-- V těle dokumentu se nachází viditelná část stránky. -->
+    <header> <!-- záhlaví -->
+		<div class="záhlaví-stránka">
+			<h1>Hledání Min</h1> <!-- hlavní nadpis stránky -->
+		</div>
+    </header>
+    <nav> <!-- navigační lišta s odkazy na jiné stránky -->
+		<ul class="navigace-list">
+			<div class="navigace">
+				<li><a href="index.html">Začátečník</a></li>
+                <li><a href="page2.html">Pokročilý</a></li>
+                <li><a href="#" class="aktivní">Expert</a></li>
+                <li><a href="page4.html">Pravidla</a></li>
+			</div>
+		</ul>
+    </nav>
+    <main> <!-- hlavní obsah stránky -->
+        <div class="stránka">
+            <div class="záhlaví-kontejner"> <!-- záhlaví hracího pole -->
+                <div id="ukazatel-počtu-min">99</div> <!-- ukazatel počtu min -->
+                <div id="refresh" onclick="location.reload()">RESET</div> <!-- tlačítko pro obnovení stránky -->
+                <div id="časovač">00:00</div> <!-- časovač -->
+            </div>
+            <div class="kontejner">
+                <!-- hrací pole -->
+            </div>
+        </div>
+    </main>
+</body>
+</html>

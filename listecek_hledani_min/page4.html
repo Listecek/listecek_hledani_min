@@ -1,0 +1,48 @@
+<!DOCTYPE html> <!-- Všechny HTML dokumenty musí obsahovat HTML prohlášení, aby prohlížeč poznal, o jaký typ dokumentu se jedná. -->
+<html lang="cs" dir="ltr"> <!-- Tento tag je kontejner pro všechny HTML elementy. Jazyk stránky je čeština a směr textu je zleva doprava. -->
+<head> <!-- V hlavě dokumentu se nachází všechny metadata o dané stránce. -->
+    <title>Hledání min</title> <!-- titul stránky -->
+    <meta charset="UTF-8"> <!-- Sada znaků daného dokumentu je Unicode. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Stránka je nyní více responzivní. -->
+    <link rel="stylesheet" href="stylesheet_pravidla.css"> <!-- propojení HTML dokumentu s CSS dokumentem -->
+</head>
+<body> <!-- V těle dokumentu se nachází viditelná část stránky. -->
+    <header> <!-- záhlaví -->
+		<div class="záhlaví-stránka">
+			<h1>Hledání Min</h1> <!-- hlavní nadpis stránky -->
+		</div>
+    </header>
+    <nav> <!-- navigační lišta s odkazy na jiné stránky -->
+		<ul class="navigace-list">
+			<div class="navigace">
+				<li><a href="index.html">Začátečník</a></li>
+				<li><a href="page2.html">Pokročilý</a></li>
+				<li><a href="page3.html">Expert</a></li>
+                <li><a href="#" class="aktivní">Pravidla</a></li>
+			</div>
+		</ul>
+    </nav>
+    <main> <!-- hlavní obsah stránky -->
+        <div class="stránka"> <!-- popis pravidel -->
+            <h2>Pravidla Hledání Min</h2>
+            <p>Hra se skládá z horního panelu a z hracího pole.</p>
+            <h3>Horní panel:</h3>
+            <div class="horní-panel">
+                <img src="images/horni_panel.PNG" alt="horní panel">
+                <p>Levý ukazatel určuje počet neožnačených min.</p>
+                <p>Vprostřed se nachází reset tlačítko, které po stistknutí restartuje hru.</p>
+                <p>Pravý ukazatel je časovač, který se spustí po prvním kliknutí na hrací pole a zastaví se, když skončí hra.</p>
+            </div>
+            <h3>Hrací pole:</h3>
+            <div class="hrací_pole">
+                <p>Hrací pole se skládá z bezpečných políček a zakrytých min. Hráč musí levým kliknutím myši odkrývat políčka dokud nenajde dobré počáteční postavení.</p>
+                <img src="images/priklad_1.png" alt="hrací pole">
+                <p>Číslice na hracím poli určují kolik se v jejich okolních osmi políčcích nachází min.</p>
+                <p>Pokud hráč najde minu, tak ji může pravým kliknutím myši označit vlaječkou.</p>
+                <p>Hra končí, pokud hráč klikne na minu. Cílem hry je odhalit všechna bezpečná políčka.</p>
+                <p>Hodně štěstí</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

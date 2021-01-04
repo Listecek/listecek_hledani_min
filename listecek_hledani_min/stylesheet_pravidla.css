@@ -1,0 +1,81 @@
+* { /* Všechny elementy v dokumentu mají následující styly. */
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 100%;
+	box-sizing: border-box;
+	background: #fff url("images/gray_background_2.jpg") repeat;
+}
+
+.záhlaví-stránka {
+	background-color: #fff;
+	width: 100%;
+	padding: 20px 0;
+}
+
+h1 { /* hlavní nadpis stránky */
+    padding-left: 20px;
+}
+
+/* styly pro navigační lištu */
+
+nav ul {
+	list-style-type: none;
+	background-color: #404040;
+	overflow: hidden;
+}
+
+nav li {
+	display: inline;
+	box-sizing: border-box;
+	float: left;
+}
+
+nav a {
+	text-decoration: none;
+	display: inline-block;
+	color: #fff;
+	padding: 10px 15px;
+}
+
+nav a:hover:not(.aktivní) {
+	background-color: #000;
+}
+
+.aktivní {
+	background-color: #cc0000;
+}
+
+.stránka { /* styly pro kontejner s pravidly */
+    width: 860px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #cccccc;
+    border: 3px solid #000000;
+}
+
+h2 {
+    text-align: center;
+	margin-bottom: 16px;
+	font-size: 2em;
+}
+
+h3 {
+	margin-bottom: 8px;
+	font-size: 1.5em;
+}
+
+p {
+	text-align: justify;
+	margin-bottom: 8px;
+	font-size: 1em;
+}
+
+.stránka img {
+	margin: 0 auto 16px;
+	display: block;
+}
+
